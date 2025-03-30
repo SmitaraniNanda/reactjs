@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";  // Importing React, useState, and useEffect hooks
 import axios from "axios";  // Importing axios for making API requests
 import { useNavigate } from "react-router-dom";  // Importing useNavigate for programmatic navigation
+import './App.css';
 
 const Ticket = ({ selectedTicket, setSelectedTicket }) => {
     const navigate = useNavigate();  // Hook for navigation between pages

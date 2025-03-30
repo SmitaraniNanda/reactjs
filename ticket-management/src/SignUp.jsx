@@ -1,101 +1,82 @@
-import React, { useState } from "react";  // Importing React and the useState hook
-import axios from "axios";  // Importing axios for making API requests
-import { useNavigate } from "react-router-dom";  // Importing useNavigate for programmatic navigation
-import './App.css';  // Importing CSS file for styling
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import "./App.css";
 
 const SignUp = () => {
-    const navigate = useNavigate();  // Hook for navigation between pages
-    
-    // State to manage form input fields
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
-        userName: "",
-        password: "",
-        name: "",
-        email: "",
-        phoneNumber: "",
-        department: "",
-        role: ""
+        userName: "", password: "", name: "", email: "", phoneNumber: "", department: "", roles: []
     });
 
-    // Handles changes in all input fields except role
     const handleChange = (event) => {
-        setFormData({
-            ...formData,
-            [event.target.name]: event.target.value,
-        });
+        const { name, value } = event.target;
+        setFormData({ ...formData, [name]: value });
     };
 
-    // Handles role selection (Only one role can be selected)
     const handleRoleChange = (event) => {
-        setFormData({ ...formData, role: event.target.value });
+        const { value, checked } = event.target;
+        setFormData((prevData) => ({
+            ...prevData,
+            roles: checked
+                ? [...prevData.roles, value]
+                : prevData.roles.filter((role) => role !== value)
+        }));
     };
 
-    // Handles form submission and sends user data to the backend
     const handleSubmit = async (event) => {
-        event.preventDefault();  // Prevents default form submission behavior
-        
-        const userWithRole = { ...formData };  // Creating an object to send to the backend
-
+        event.preventDefault();
         try {
-            const response = await axios.post("http://localhost:8080/users/add", userWithRole);
-            console.log(response.data);  // Logging the response from the server
-            alert("Successfully Registered");
-            navigate('/login');  // Redirect to login page after successful registration
+            await axios.post("http://localhost:8080/users/add", formData);
+            alert("Registration Successful");
+            navigate("/login");
         } catch (error) {
-            console.error("Error: ", error);  // Logging error details
-            alert("Registration Failed");  // Showing an alert message in case of failure
+            alert("Registration Failed");
         }
     };
 
     return (
-        <>
-            {/* Registration Form */}
+        <div className="container">
+            <h2>Sign Up</h2>
             <form onSubmit={handleSubmit}>
-                {/* Username Input */}
-                <label htmlFor="userName">Username:</label>
-                <input type="text" name="userName" value={formData.userName} onChange={handleChange} required /><br />
+                <label>Username:</label>
+                <input type="text" name="userName" value={formData.userName} onChange={handleChange} required />
+                <label>Name:</label>
+                <input type="text" name="name" value={formData.name} onChange={handleChange} required />
 
-                {/* Password Input */}
-                <label htmlFor="password">Password:</label>
-                <input type="password" name="password" value={formData.password} onChange={handleChange} required /><br />
 
-                {/* Name Input */}
-                <label htmlFor="name">Name:</label>
-                <input type="text" name="name" value={formData.name} onChange={handleChange} required /><br />
+                <label>Password:</label>
+                <input type="password" name="password" value={formData.password} onChange={handleChange} required />
 
-                {/* Email Input (Must be @questk2.com email) */}
-                <label htmlFor="email">Email:</label>
-                <input type="email" name="email" value={formData.email} onChange={handleChange} pattern=".+@questk2\.com$" required />
-                <small> (Must be @questk2.com email)</small><br />
+                <label>Email:</label>
+                <input type="email" name="email" value={formData.email} onChange={handleChange} required />
 
-                {/* Mobile Number Input (Only 10 digits allowed) */}
-                <label htmlFor="phoneNumber">Mobile Number:</label>
-                <input type="text" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} pattern="[0-9]{10}" required />
-                <small> (10 digits only)</small><br />
+                <label>Phone Number:</label>
+                <input type="text" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} required />
 
-                {/* Department Input */}
-                <label htmlFor="department">Department:</label>
-                <input type="text" name="department" value={formData.department} onChange={handleChange} required /><br />
+                <label>Department:</label>
+                <input type="text" name="department" value={formData.department} onChange={handleChange} required />
 
-                {/* Role Selection using Radio Buttons (Only one can be selected) */}
-                <label>Role:</label><br />
-                <input type="radio" name="role" value="Admin" checked={formData.role === "Admin"} onChange={handleRoleChange} />
-                <label>Admin</label><br />
+                <label>Roles:</label>
+                <div className="role-checkbox-group">
+                    <label>
+                        <input type="checkbox" value="Admin" onChange={handleRoleChange} checked={formData.roles.includes("Admin")} />
+                        Admin
+                    </label>
+                    <label>
+                        <input type="checkbox" value="Frontend Developer" onChange={handleRoleChange} checked={formData.roles.includes("Frontend Developer")} />
+                        Frontend Developer
+                    </label>
+                    <label>
+                        <input type="checkbox" value="Backend Developer" onChange={handleRoleChange} checked={formData.roles.includes("Backend Developer")} />
+                        Backend Developer
+                    </label>
+                </div>
 
-                <input type="radio" name="role" value="Frontend Developer" checked={formData.role === "Frontend Developer"} onChange={handleRoleChange} />
-                <label>Frontend Developer</label><br />
-
-                <input type="radio" name="role" value="Backend Developer" checked={formData.role === "Backend Developer"} onChange={handleRoleChange} />
-                <label>Backend Developer</label><br />
-
-                {/* Submit Button */}
-                <button type="submit">Submit</button>
+                <button type="submit">Sign Up</button>
             </form>
-
-            {/* Login Navigation */}
-            <h5>Already have an account? <a href="/login">Login</a></h5>
-            <button onClick={() => navigate('/login')}>Login</button>
-        </>
+            <p>Already have an account? <a href="/login">Login</a></p>
+        </div>
     );
 };
 

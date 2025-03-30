@@ -1,78 +1,56 @@
-import React, { useEffect, useState } from "react";  // Importing React and necessary hooks
-import axios from "axios";  // Importing axios for API calls
-import { useNavigate } from "react-router-dom";  // Importing useNavigate for navigation
-import { Link } from "react-router-dom";  // Importing Link for navigation between pages
-import './App';  // Importing CSS file 
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import "./App.css";
 
 const Login = () => {
-    const navigate = useNavigate();  // Hook for programmatic navigation
+    const navigate = useNavigate();
+    const [loginData, setLoginData] = useState({ userName: "", pwd: "" });
 
-    // State to store users fetched from the backend
-    const [users, setUsers] = useState([]);
 
-    // State to handle error messages
-    const [error, setError] = useState("");
-
-    // State to store user input for login
-    const [loginData, setLoginData] = useState({
-        userName: "",
-        password: ""
-    });
-
-    // Fetch users from the backend when the component mounts
-    useEffect(() => {
-        axios.get('http://localhost:8080/users')
-        .then((response) => {
-            setUsers(response.data);  // Store users in state and Updates the users state with fetched data
-        })
-        .catch((error) => {
-            console.error("Error fetching data: ", error); //Logs any API call failures
-        });
-    }, []);
-
-    // Handle input field changes and update loginData state
     const handleChange = (event) => {
-        console.log(event.target.value);  // Log user input for debugging
-        setLoginData({
-            ...loginData,
-            [event.target.name]: event.target.value,  //Updates specific field values (userName or password)
-        });
+        setLoginData({ ...loginData, [event.target.name]: event.target.value });
     };
 
-    // Handle login form submission
-    const handleLogin = (event) => {
+    const handleLogin = async (event) => {
         event.preventDefault();
-
-        // Check if entered credentials match any user in the database
-        const user = users.find((employee) => 
-            employee.userName === loginData.userName && employee.password === loginData.password
-        );
-
-        if (user) {
-            navigate('/ticketForm');  // Navigate to ticketForm page if login is successful
-        } else {
-            alert("Invalid Username or Password");  // Show alert for invalid credentials
+        try {
+            const response = await axios.post("http://localhost:8080/authenticate", loginData);
+            if (response.data) {
+                navigate("/ticketForm");  // Redirect to dashboard on success
+            } else {
+                alert("Invalid Username or Password");
+            }
+        } catch (error) {
+            alert("Login Failed");
         }
     };
 
     return (
-        <>
+        <div className="container">
             <h2>Login</h2>
-            {/* Login Form */}
             <form onSubmit={handleLogin}>
                 <label htmlFor="userName">UserName:</label>
-                <input type="text" name="userName" value={loginData.userName} onChange={handleChange} required /><br />
+                <input 
+                    type="text" 
+                    id="userName"
+                    name="userName" 
+                    value={loginData.userName} 
+                    onChange={handleChange} 
+                    required 
+                />
 
                 <label htmlFor="password">Password:</label>
-                <input type="password" name="password" value={loginData.password} onChange={handleChange} required /><br />
+                <input type="password" name="pwd" value={loginData.pwd} onChange={handleChange} required />
+
 
                 <button type="submit">Login</button>
             </form>
-
-            {/* Navigation to SignUp page */}
-            <h5>Don't have an account? <Link to="./SignUp">Sign Up</Link></h5>
-        </>
+            <p>
+                Don't have an account? <a href="/signup">Sign Up</a>
+            </p>
+        </div>
     );
-}
+};
 
 export default Login;

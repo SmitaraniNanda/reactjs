@@ -25,7 +25,7 @@ const AppRouter = () => {
 
                     {/* Route for Sign Up Page */}
                     <Route path="/signup" element={<SignUp />} />
-
+                    <Route path="/login" element={<Login />} />
                     {/* Route for Adding and Editing Tickets */}
                     <Route path="/addTicket" element={<Ticket selectedTicket={selectedTicket} setSelectedTicket={setSelectedTicket} />} />
 
