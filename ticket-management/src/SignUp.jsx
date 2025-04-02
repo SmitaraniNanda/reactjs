@@ -20,7 +20,7 @@ const SignUp = () => {
 
     /**
      * Handles input field changes and updates the state dynamically.
-     * @param {Event} event - The input change event.
+     * The input change event.
      */
     const handleChange = (event) => {
         const { name, value } = event.target;
@@ -29,7 +29,7 @@ const SignUp = () => {
 
     /**
      * Handles role selection via checkboxes.
-     * @param {Event} event - The checkbox change event.
+     * The checkbox change event.
      */
     const handleRoleChange = (event) => {
         const { value, checked } = event.target;
@@ -43,7 +43,7 @@ const SignUp = () => {
 
     /**
      * Handles form submission by sending data to the backend.
-     * @param {Event} event - The form submission event.
+     *  The form submission event.
      */
     const handleSubmit = async (event) => {
         event.preventDefault(); // Prevents default form submission behavior

@@ -7,9 +7,8 @@ import TicketForm from "./TicketForm";
 import Login from "./Login";
 
 /**
- * AppRouter Component
- *  Manages routing using React Router.
- *  Defines different routes for navigation between components.
+ *  routing using React Router.
+ *  different routes for navigation between components.
  *  Uses state to manage selected ticket data for editing.
  */
 const AppRouter = () => {

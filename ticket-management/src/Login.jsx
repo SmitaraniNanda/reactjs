@@ -12,17 +12,16 @@ const Login = () => {
 
     /**
      * Handles input field changes and updates state.
-     * @param {object} event - The event object from the input field.
+     * The event object from the input field.
      */
     const handleChange = (event) => {
         setLoginData({ ...loginData, [event.target.name]: event.target.value });
     };
 
     /**
-     * Sends login data to backend API for authentication.
      * Navigates to the ticket form page upon successful authentication.
      * Alerts the user if authentication fails.
-     * @param {object} event - The event object from form submission.
+     *- The event object from form submission.
      */
     const handleLogin = async (event) => {
         event.preventDefault(); // Prevents the page from refreshing on form submission
