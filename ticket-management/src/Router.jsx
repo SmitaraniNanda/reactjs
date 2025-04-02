@@ -8,7 +8,7 @@ import Login from "./Login";
 
 /**
  * AppRouter Component
- *  Manages application routing using React Router.
+ *  Manages routing using React Router.
  *  Defines different routes for navigation between components.
  *  Uses state to manage selected ticket data for editing.
  */

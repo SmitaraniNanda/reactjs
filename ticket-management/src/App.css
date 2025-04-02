@@ -173,19 +173,59 @@ button:hover {
   cursor: pointer;
 }
 
-.delete {
-  background: red;
-  color: white;
-  padding: 8px 12px;
-  border: none;
-  cursor: pointer;
-}
 /* Action Buttons (Edit and Delete in One Line) */
 .action-buttons {
   display: flex;
   gap: 10px;
 }
 
+/* TicketForm Table Container - Fixed Size */
+.ticket-table-container {
+  width: 90%; /* Adjusted width */
+  max-width: 1000px; /* Prevents table from being too large */
+  height: 70vh; /* Fixed height within window */
+  overflow: hidden; /* Prevents scrolling */
+  margin: 20px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* TicketForm Table - Proper Row Layout */
+.ticket-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* Ensures equal spacing */
+}
+
+/* Add Line Between All Items */
+.ticket-table th, 
+.ticket-table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd; /* Border to separate rows & columns */
+}
+
+/* Table Header */
+.ticket-table th {
+  background-color: #007bff;
+  color: white;
+  text-transform: uppercase;
+}
+
+/* Row Hover Effect */
+.ticket-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Action Buttons (Edit & Delete in One Line) */
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+/* Edit Button */
 .edit-btn {
   background-color: #28a745;
   color: white;
@@ -195,9 +235,27 @@ button:hover {
   border-radius: 5px;
 }
 
+/* Delete Button - Force Red Color */
+.delete-btn {
+  background-color: red !important; /* Ensures red color */
+  color: white !important;
+  padding: 6px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.delete:hover {
+  background-color: darkred !important; /* Darker red on hover */
+}
+table, th, td {
+  border: 1px solid #ddd; /* Light gray border */
+  border-collapse: collapse; /* Ensure no double borders */
+}
 
-
-
+th, td {
+  padding: 12px;
+  text-align: left;
+}
 
 
 
