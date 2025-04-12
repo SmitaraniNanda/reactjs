@@ -1,0 +1,243 @@
+/* ===============================
+   Global Base Styles
+================================= */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* ===============================
+   Fixed Window for Blog Grid
+================================= */
+.blog-container {
+  height: calc(100vh - 60px); /* Subtract navbar height */
+  padding: 20px 15px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-auto-rows: 1fr; /* Ensures 3 equal height rows */
+  gap: 20px;
+  overflow-y: auto; /* Allow scroll if content overflows */
+  box-sizing: border-box;
+}
+
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 0; /* Prevents overflow */
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: white;
+}
+
+.fixed-grid-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* ===============================
+   Blog Card
+================================= */
+.blog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+
+.image-wrapper {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+/* ===============================
+   Blog Image
+================================= */
+.blog-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* ===============================
+   Blog Info Section
+================================= */
+.blog-info {
+  padding: 12px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.blog-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  font-size: 14px;
+  background-color: #f8f9fa;
+  border-top: 1px solid #ddd;
+}
+
+.blog-footer .d-flex {
+  display: flex;
+}
+
+.blog-footer .d-flex span {
+  margin-left: 5px;
+}
+
+.blog-footer .d-flex align-items-center i {
+  font-size: 14px;
+}
+
+.blog-container .row > div {
+  display: flex;
+}
+
+.fixed-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* ===============================
+   Card Body & Typography
+================================= */
+.card-body {
+  font-size: 14px;
+  color: #333;
+  padding: 14px 16px !important;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow: hidden;
+}
+
+.card-body .designer-name {
+  font-weight: 600;
+  font-size: 16px;
+  color: #212529;
+}
+
+.card-body .likes-views {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #888;
+}
+
+.card-body .likes-views span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* ===============================
+   Top Navbar
+================================= */
+.top-navbar {
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+/* ===============================
+   Search Bar
+================================= */
+.searchbar {
+  flex: 1;
+  max-width: 350px;
+  margin-right: 20px;
+}
+
+.search-input {
+  width: 100%;
+  border-radius: 25px;
+  padding: 8px 15px;
+  border: 1px solid #ccc;
+  transition: box-shadow 0.3s ease;
+}
+
+.search-input:focus {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-color: #999;
+  outline: none;
+}
+
+/* ===============================
+   Navbar Links & Buttons
+================================= */
+.top-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ===============================
+   Utility Classes
+================================= */
+.me-1 {
+  margin-right: 0.25rem;
+}
+
+/* ===============================
+   Responsive Design for Smaller Screens
+================================= */
+@media (max-width: 768px) {
+  .top-navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .searchbar {
+    margin-right: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .top-links,
+  .auth-buttons {
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .blog-container {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    padding: 15px 10px;
+    height: auto;
+    overflow-y: auto;
+  }
+
+  .blog-image {
+    height: 160px;
+  }
+}
