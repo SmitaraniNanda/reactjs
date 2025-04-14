@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
 import { FaUser, FaHeart, FaEye } from 'react-icons/fa';
-import '../App.css'; // CSS for styles
+import '../App.css'; 
 
 export default function BlogCard({ img, name, likes, views }) {
   return (
