@@ -11,7 +11,7 @@ const occasions = [
   { title: "Birthday", img: birthdayGifts },
   { title: "Anniversary", img: anniversaryGifts },
   { title: "Gifts For Him", img: giftsForHim },
-  { title: "Gifts For Her", img: giftsForHer }, // fixed typo: both were "Gifts For Him"
+  { title: "Gifts For Her", img: giftsForHer }, 
 ];
 
 const OccasionsSection = () => (

@@ -1,8 +1,8 @@
-// src/components/CategoryCards.jsx
+
 import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 
-// ✅ Import images from src/assets
+
 import flowers from "../assets/flowers.jpg";
 import cakes from "../assets/cakes.jpg";
 import combos from "../assets/combos.jpg";
@@ -10,7 +10,7 @@ import plants from "../assets/plants.jpg";
 import personalised from "../assets/personalised.jpg";
 import gifts from "../assets/gifts.jpg";
 
-// ✅ Now use imported images in the array
+
 const categories = [
   { title: "Flowers", img: flowers },
   { title: "Cakes", img: cakes },

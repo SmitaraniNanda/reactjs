@@ -1,4 +1,4 @@
-// src/components/HeroBanner.jsx
+
 import React from 'react';
 import { Container, Image } from 'react-bootstrap';
 

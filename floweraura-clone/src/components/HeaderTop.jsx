@@ -9,7 +9,7 @@ import {
   FiMoreHorizontal,
   FiGift,
 } from "react-icons/fi";
-import logo from "../assets/final-23-desk.svg"; // adjust if needed
+import logo from "../assets/final-23-desk.svg"; 
 
 const HeaderTop = () => {
   return (
