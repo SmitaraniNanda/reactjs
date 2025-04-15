@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html, #root {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.app-container {
+  background-image: url('https://images.unsplash.com/photo-1503264116251-35a269479413?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding: 30px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto; /* Allows scroll if needed */
+}
+
+.signup-box {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 500px;
+  min-width: 300px;
+  max-height: none;
+  overflow: visible;
+}
+
+.signup-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.signup-box h4 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.signup-box input,
+.signup-box select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.signup-box .dob {
+  display: flex;
+  gap: 10px;
+}
+
+.signup-box .dob input {
+  flex: 1;
+}
+
+.signup-box button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.signup-box button:hover {
+  background-color: #333;
+}
+
+.error {
+  color: red;
+  font-size: 13px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .signup-box {
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .signup-box input,
+  .signup-box select {
+    font-size: 14px;
+  }
+}
