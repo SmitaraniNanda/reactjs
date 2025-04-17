@@ -1,0 +1,573 @@
+#root {
+  padding: 2rem;
+}
+body{
+  background-color: black;
+  margin: 0 ;
+}
+.container{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  left: 85px;
+}
+.container1{
+  background-color: #2c2c2c;
+  width: 250px;
+  height: 200px;
+  border-radius: 20px;
+  margin: 20px;
+}
+.container2{
+  background-color: #2c2c2c;
+  width: 250px;
+  height: 300px;
+  border-radius: 20px;
+  margin: 20px;
+}
+.container3{
+  background-color: #3826b0;
+  width: 250px;
+  height: 150px;
+  border-radius: 20px;
+  margin: 20px;
+}
+.container4{
+  background-color: #2c2c2c;
+  width: 380px;
+  height: 135px;
+  border-radius: 20px;
+  margin: 20px;
+}
+.container5-6{
+  display: flex;
+  flex-direction: row;
+}
+.container5{
+  background-color: #2c2c2c;
+  width: 180px;
+  height: 230px;
+  border-radius: 20px;
+  margin-left: 20px;
+}
+.container6{
+  background-color: #2c2c2c;
+  width: 180px;
+  height: 230px;
+  border-radius: 20px;
+  margin-left: 20px;
+}
+.container7{
+  background-color: #2c2c2c;
+  width: 380px;
+  height: 285px;
+  border-radius: 20px;
+  margin: 20px;
+}
+.container8{
+  background-color: #2c2c2c;
+  width: 450px;
+  height: 165px;
+  border-radius: 20px;
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+}
+.container9{
+  background-color: #2c2c2c;
+  width: 450px;
+  height: 255px;
+  border-radius: 20px;
+  margin: 20px;
+}
+.container10{
+  background-color: #2c2c2c;
+  width: 215px;
+  height: 230px;
+  border-radius: 20px;
+  margin-left: 20px;
+}
+.container11{
+  background-color: #2c2c2c;
+  width: 215px;
+  height: 230px;
+  border-radius: 20px;
+  margin-left: 20px;
+}
+.name{
+  color: #f45662;
+  font-size: 35px;
+  font-family:  sans-serif;
+  padding-top: 10px;
+  margin-left: 30px;
+}
+.role{
+  color: #a7a7a7;
+  font-size: 15px;
+  font-family:  sans-serif;
+  margin-left: 35px;
+}
+.project-number{
+  color: white;
+  font-weight: 800;
+  font-size: 20px;
+  margin-left: 40px;
+  margin-top: 30px;
+}
+.projects{
+  color: #a7a7a7;
+  font-size: 15px;
+  font-family:  sans-serif;
+  margin-left: 35px;
+}
+.project-revenue{
+  display: flex;
+  flex-direction: row;
+}
+.dashboard-icon{
+  margin: 8px;
+  width: 30px;
+  height: 30px;
+}
+.dashboard{
+  color: white;
+  margin-left: 25px;
+  margin: 10px;
+}
+.dashboard2{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  left: 40px;
+  top: 40px;
+}
+.goPro{
+  color: #fff;
+  font-size: 35px;
+  font-family:  sans-serif;
+  padding-top: 1px;
+  margin-left: 30px;
+}
+.upgrade{
+  color: #fff;
+  font-size: 15px;
+  font-family: sans-serif;
+  margin-left: 35px;
+}
+.letsStart-div{
+  background-color: black;
+  width: 90px;
+  height: 35px;
+  margin-left: 130px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.letsStart{
+  color: #fff;
+  font-family: "Gill Sans", sans-serif;
+  margin: 10px;
+}
+.dollar{
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  position: relative;
+  top: 40px;
+  left: 50px;
+  border-radius: 50px;
+}
+.dollar-size{
+  font-size: 30px;
+  margin-left: 16px;
+  color: #fff;
+}
+.total{
+  color: #fff;
+  font-size: 20px;
+  position: relative;
+  left: 160px;
+  bottom: 30px;
+}
+.total-revenue{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 800;
+  position: relative;
+  left: 160px;
+  bottom: 30px;
+}
+.progress-bar{
+  height: 7px;
+  
+}
+.progress{
+  width: 140px;
+  position: relative;
+  left: 160px;
+  bottom: 10px;
+}
+.profile-size{
+  width: 80px;
+  height: 40px;
+  position: relative;
+  top: 20px;
+  left: 20px;
+}
+.travel{
+  color: #fff;
+  font-family:  sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  position: relative;
+  left: 20px;
+  top: 10px;
+}
+.mobile{
+  color: #fff;
+  font-family:  sans-serif;
+  font-size: 15px;
+  position: relative;
+  left: 20px;
+  top: 8px;
+}
+.seenBy{
+  color: #fff;
+  font-family:  sans-serif;
+  font-size: 13px;
+  position: relative;
+  left: 20px;
+  top: 8px;
+}
+.tour-trip{
+  display: flex;
+  flex-direction: row;
+}
+.tour{
+  color: #fff;
+  background-color: #3826b0;
+  width: 50px;
+  height: 20px;
+  position: relative;
+  left: 20px;
+  top: 30px;
+  border-radius: 20px;
+  margin: 5px;
+}
+.tour-place{
+  position: relative;
+  left: 10px;
+  bottom: 2px;
+  font-size: 12px;
+}
+.trip{
+  color: #fff;
+  background-color: black;
+  width: 50px;
+  height: 20px;
+  position: relative;
+  left: 20px;
+  top: 30px;
+  border-radius: 20px;
+  margin: 5px;
+}
+.transport{
+  color: #fff;
+  background-color: black;
+  width: 100px;
+  height: 20px;
+  position: relative;
+  left: 20px;
+  top: 30px;
+  border-radius: 20px;
+  margin: 5px;
+}
+.full-travel{
+  position: relative;
+  top: 10px;
+}
+.freeSlots{
+  color: #fff;
+  font-family:  sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  position: relative;
+  left: 30px;
+  top: 30px;
+}
+.first-row{
+  display: flex;
+  flex-direction: row;
+}
+.first{
+  width: 75px;
+  height: 90px;
+  background-color: #ff5360;
+  position: relative;
+  left: 25px;
+  top: 45px;
+  border-radius: 20px;
+  margin-right: 25px;
+}
+.second{
+  width: 75px;
+  height: 90px;
+  background-color: black;
+  position: relative;
+  left: 25px;
+  top: 45px;
+  border-radius: 20px;
+  margin-right: 25px;
+}
+.third{
+  width: 75px;
+  height: 90px;
+  background-color: black;
+  position: relative;
+  left: 25px;
+  top: 45px;
+  border-radius: 20px;
+}
+.fourth{
+  width: 75px;
+  height: 90px;
+  background-color: black;
+  position: relative;
+  left: 25px;
+  top: 45px;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-right: 25px;
+}
+.fifth{
+  width: 75px;
+  height: 90px;
+  background-color: black;
+  position: relative;
+  left: 25px;
+  top: 45px;
+  border-radius: 20px;
+  margin-right: 25px;
+  margin-top: 10px;
+}
+.sixth{
+  width: 75px;
+  height: 90px;
+  background-color: black;
+  position: relative;
+  left: 25px;
+  top: 45px;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+.date{
+  color: #fff;
+  font-family: Georgia, serif;;
+  font-size: 30px;
+  position: relative;
+  left: 20px;
+  top: 8px;
+  font-weight: 600;
+}
+.month{
+  color: #fff;
+  font-family: "Gill Sans", sans-serif;
+  font-size: 20px;
+  position: relative;
+  left: 20px;
+  font-weight: 400;
+}
+.paint-logo{
+  width: 110px;
+  height: 115px;
+  margin-left: 20px;
+  margin-top: 25px;
+}
+.client{
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  position: relative;
+  left: 40px;
+  top: 30px;
+  font-family: "Gill Sans", sans-serif;
+}
+.join-community{
+  color: #fff;
+  font-size: 15px;
+  font-family: "Gill Sans", sans-serif;
+  position: relative;
+  left: 40px;
+  top: 35px;
+  width: 220px;
+}
+.transaction{
+  color: #fff;
+  font-family: "Gill Sans", sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  position: relative;
+  left: 30px;
+  top: 20px;
+}
+.Hi-name{
+  color: #fff;
+  font-family: "Gill Sans", sans-serif;
+  font-size: 15px;
+  position: relative;
+  left: 30px;
+  bottom: 45px;
+}
+.earnings{
+  color: #fff;
+  font-size: 19px;
+  font-weight: 600;
+  position: relative;
+  left: 30px;
+  bottom: 32px;
+}
+.available-balance{
+  color: #bbbcb9;
+  margin-left: 25px;
+  margin: 10px;
+  position: relative;
+  left: 20px;
+  bottom: 45px;
+}
+.profile-logos{
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  border-radius: 30px;
+  background-color: black;
+}
+.profiles{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  bottom: 40px;
+  left: 21px;
+}
+.arrow{
+  width: 30px;
+  height: 40px;
+  position: relative;
+  left: 5px;
+}
+.profile-logo{
+  width: 55px;
+  height: 55px;
+  margin: 5px;
+  border-radius: 30px;
+  background-color: black;
+  position: relative;
+  left: 330px;
+  bottom: 20px;
+}
+.send-button{
+  background-color: #f45662;
+  width: 80px;
+  height: 30px;
+  position: relative;
+  left: 330px;
+  bottom: 40px;
+  border-radius: 20px;
+}
+.send{
+  color: #fff;
+  text-align: center;
+  position: relative;
+  top: 3px;
+}
+.project-details{
+  color: #fff;
+  font-size: 17px;
+  position: relative;
+  left: 20px;
+  top: 20px;
+  font-family: "Gill Sans", sans-serif;
+}
+.profile-name{
+  color: #f45662;
+  position: relative;
+  top: 25px;
+  left: 18px;
+  font-weight: 600;
+  font-family: "Gill Sans", sans-serif;
+  font-size: 25px;
+}
+.role-name{
+  color: #a7a7a7;
+  font-size: 15px;
+  font-family:  sans-serif;
+  position: relative;
+  top: 25px;
+  left: 20px;
+}
+.project-progress{
+  color: #fff;
+  font-size: 15px;
+  position: relative;
+  left: 20px;
+  top: 50px;
+  font-family:  sans-serif;
+}
+.progress-bar-project{
+  height: 7px;
+}
+.progress-project{
+  position: relative;
+  top: 90px;
+  left: 24px;
+  width: 160px;
+}
+.percent{
+  color: #fff;
+  font-family:  sans-serif;
+  font-weight: 600;
+  position: relative;
+  left: 150px;
+  margin-bottom: 3px;
+}
+.progress-percent{
+  position: relative;
+  top: 40px;
+}
+.remaining-projects{
+  color: #a7a7a7;
+  font-size: 15px;
+  font-family:  sans-serif;
+  position: relative;
+  top: 50px;
+  left: 30px;
+}
+.percentage{
+  background-color: #2c2c2c;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rounded-progress-full{
+  position: relative;
+  left: 50px;
+  top: 30px;
+}
+.progress-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: conic-gradient(#f45662 0% 75%, blue 75% 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.number-percentage{
+  font-weight: 600;
+  color: #fff;
+  font-size: 15px;
+  font-family:  sans-serif;
+}

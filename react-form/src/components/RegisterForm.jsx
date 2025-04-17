@@ -95,11 +95,37 @@ function RegisterForm() {
           <input name="lastName" value={formData.lastName} onChange={handleChange} placeholder="Last Name" />
           <p className="error">{errors.lastName}</p>
 
-          <div className="dob">
-            <input name="day" value={formData.day} onChange={handleChange} placeholder="Day" />
-            <input name="month" value={formData.month} onChange={handleChange} placeholder="Month" />
-            <input name="year" value={formData.year} onChange={handleChange} placeholder="Year" />
-          </div>
+ <div className="dob">
+  <input
+    type="number"
+    name="day"
+    placeholder="Day"
+    value={formData.day}
+    min="1"
+    max="31"
+    onChange={handleChange}
+  />
+  <input
+    type="number"
+    name="month"
+    placeholder="Month"
+    value={formData.month}
+    min="1"
+    max="12"
+    onChange={handleChange}
+  />
+  <input
+    type="number"
+    name="year"
+    placeholder="Year"
+    value={formData.year}
+    min="1950"
+    max={new Date().getFullYear()}
+    onChange={handleChange}
+  />
+</div>
+<p className="error">{errors.day}</p>
+
           <p className="error">{errors.day}</p>
 
           <select name="gender" value={formData.gender} onChange={handleChange}>
