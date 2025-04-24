@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col, Container, Image } from 'react-bootstrap';
+import { Container, Image } from 'react-bootstrap';
 import akshayaImg from '../assets/akshaya.jpg';
 import mothersDayImg from '../assets/mothers_day.jpg';
 import earthWeekImg from '../assets/earth_week.jpg';

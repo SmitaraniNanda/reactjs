@@ -1,4 +1,4 @@
-/* === Global === */
+/*  Global */
 body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #f9f9f9;
@@ -6,7 +6,7 @@ body {
   padding: 0;
 }
 
-/* === Navbar === */
+/*  Navbar  */
 .navbar {
   background-color: #fff !important;
   border-bottom: 1px solid #e0e0e0;
@@ -26,7 +26,7 @@ body {
   color: #007bff !important;
 }
 
-/* === Category Section === */
+/*  Category Section  */
 .category-section {
   padding: 2rem 1rem;
   text-align: center;
@@ -63,7 +63,7 @@ body {
   border-radius: 8px;
 }
 
-/* === Favorite Picks === */
+/* Favorite Picks */
 .favorite-section {
   padding: 2rem 1rem;
 }
@@ -83,7 +83,6 @@ body {
   border-radius: 10px;
 }
 
-
 .occasion-scroll-wrapper {
   display: flex;
   overflow-x: auto;
@@ -92,11 +91,11 @@ body {
   gap: 1rem;
   padding: 1rem 0;
   scroll-behavior: smooth;
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none; 
 }
 
 .occasion-scroll-wrapper::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
+  display: none; 
 }
 
 .occasion-img-wrapper {
@@ -118,14 +117,14 @@ body {
   color: #555;
 }
 
-/* === Offer Section === */
+/*  Offer Section  */
 .offer-banner {
   width: 100%;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* === Responsive Adjustments === */
+/*  Responsive Adjustments */
 @media (max-width: 992px) {
   .category-card {
     flex: 1 1 calc(25% - 1rem);
@@ -155,3 +154,53 @@ body {
     max-width: 100%;
   }
 }
+/* Scrollable Row for Gifts That Spark Joy & Best Selling Combos */
+.scroll-row {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  gap: 16px;
+  padding-bottom: 10px;
+}
+
+.scroll-row::-webkit-scrollbar {
+  display: none;
+}
+
+/* Price & Rating Styling */
+.price {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.rating-stars {
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+  font-size: 1.1rem;
+}
+
+/* Gifts Under ₹999 Styling */
+.under999-grid .card {
+  border: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.under999-grid .card-img-top {
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.combo-card {
+  border: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.custom-img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
