@@ -1,4 +1,3 @@
-// components/BestSellingCombos.jsx
 import React from 'react';
 import { Container, Card, Row, Col } from 'react-bootstrap';
 import { FaStar, FaRegStar } from 'react-icons/fa';

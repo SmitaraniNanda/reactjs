@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col, Container } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import CategoryCard from './categoryCard';
 import sameDayImg from '../assets/same_day.jpg'; 
 import flowersImg from '../assets/flowers.jpg';

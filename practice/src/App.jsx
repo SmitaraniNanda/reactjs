@@ -8,6 +8,11 @@ import FavoritePicks from './components/FavoritePicks';
 import GiftsThatSparkJoy from './components/GiftsThatSparkJoy';
 import GiftsUnder999 from './components/GiftsUnder999';
 import BestSellingCombos from './components/BestSellingCombos';
+import BudgetFriendlyGifts from './components/BudgetFriendlyGifts';
+import PersonalizedGifts from './components/PersonalizedGifts';
+import SweetSurprises from './components/SweetSurprises';
+
+
 import './App.css';
 
 const App = () => (
@@ -20,6 +25,9 @@ const App = () => (
     <GiftsThatSparkJoy />
     <GiftsUnder999 />
     <BestSellingCombos />
+    <BudgetFriendlyGifts />
+    <PersonalizedGifts />
+    <SweetSurprises />
   </>
 );
 

@@ -1,10 +1,18 @@
 import React from 'react';
 import { Navbar, Nav, Container, Form, FormControl, Button } from 'react-bootstrap';
+import logo from '../assets/logo.jpg'; // Make sure the path is correct
 
 const MainNavbar = () => (
   <Navbar bg="light" expand="lg" className="shadow-sm">
     <Container>
-      <Navbar.Brand href="#home">IGP Clone</Navbar.Brand>
+      {/* Display logo as a link in the navbar */}
+      <Navbar.Brand href="#home">
+        <img
+          src={logo}
+          alt="Logo"
+          style={{ height: '40px', width: 'auto' }} // Adjust size as needed
+        />
+      </Navbar.Brand>
       <Navbar.Toggle aria-controls="navbarScroll" />
       <Navbar.Collapse id="navbarScroll">
         <Nav className="me-auto">

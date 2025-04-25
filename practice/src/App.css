@@ -203,4 +203,95 @@ body {
   object-fit: cover;
   border-radius: 8px;
 }
+/* General Section Styling */
+.section {
+  padding: 40px 20px;
+  text-align: center;
+}
 
+.section-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/*  Budget Friendly Gifts Section (Scoped)  */
+.budget-gift-section {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.budget-gift-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.budget-gift-subtitle {
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 25px;
+}
+
+/* Banner Row with connected feel */
+.budget-banner-strip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  flex-wrap: wrap;
+}
+
+.budget-banner-strip img {
+  flex: 1;
+  height: 240px;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 0;
+  transition: transform 0.3s ease;
+}
+
+.budget-banner-strip img:hover {
+  transform: scale(1.02);
+}
+
+/* Optional Responsive Handling */
+@media (max-width: 768px) {
+  .budget-banner-strip {
+    flex-direction: column;
+  }
+
+  .budget-banner-strip img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Banner Style for Sweet Surprises */
+.banner-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.banner-img {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.15);
+}
