@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Image } from 'react-bootstrap';
-import offerImg from '../assets/delivery_banners.jpg'; // Make sure the image exists
+import offerImg from '../assets/delivery_banners.jpg'; 
 
 const OfferSection = () => (
   <Container id="offers" className="text-center my-5">
