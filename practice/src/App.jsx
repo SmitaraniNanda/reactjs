@@ -11,7 +11,8 @@ import BestSellingCombos from './components/BestSellingCombos';
 import BudgetFriendlyGifts from './components/BudgetFriendlyGifts';
 import PersonalizedGifts from './components/PersonalizedGifts';
 import SweetSurprises from './components/SweetSurprises';
-
+import FlowerSections from './components/FlowerSections';
+import TrendingCollections from "./components/TrendingCollections";
 
 import './App.css';
 
@@ -28,6 +29,8 @@ const App = () => (
     <BudgetFriendlyGifts />
     <PersonalizedGifts />
     <SweetSurprises />
+    <FlowerSections/>
+    <TrendingCollections />
   </>
 );
 
