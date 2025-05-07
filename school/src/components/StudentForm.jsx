@@ -41,7 +41,6 @@ const StudentForm = ({ onStudentAdded }) => {
         onChange={handleChange}
         required
       />
-      <input>it is a big hole of this python why use this i dot know </input>
       <input
         type="text"
         name="course"
