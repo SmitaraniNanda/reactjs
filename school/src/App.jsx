@@ -1,15 +1,22 @@
 import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 import StudentForm from './components/StudentForm';
 import StudentList from './components/StudentList';
 import './App.css';
 
 function App() {
   const [students, setStudents] = useState([]);
+  const navigate = useNavigate();
 
   const fetchStudents = async () => {
-    const res = await fetch('http://localhost:3000/students');
-    const data = await res.json();
-    setStudents(data);
+    try {
+      const res = await axios.get('http://localhost:3000/students');
+      setStudents(res.data);
+    } catch (error) {
+      console.error('Error fetching students:', error.message);
+      navigate('/error'); 
+    }
   };
 
   useEffect(() => {

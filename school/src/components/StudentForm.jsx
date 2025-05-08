@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const StudentForm = ({ onStudentAdded }) => {
   const [form, setForm] = useState({ name: '', email: '', course: '' });
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -9,18 +12,14 @@ const StudentForm = ({ onStudentAdded }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    const res = await fetch("http://localhost:3000/students", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(form), // ← fixed here
-    });
-
-    const data = await res.json();
-    onStudentAdded(data);
-    setForm({ name: '', email: '', course: '' });
+    try {
+      const res = await axios.post('http://localhost:3000/students', form);
+      onStudentAdded(res.data);
+      setForm({ name: '', email: '', course: '' });
+    } catch (error) {
+      console.error('Error adding student:', error.message);
+      navigate('/error'); // Redirect on error
+    }
   };
 
   return (
