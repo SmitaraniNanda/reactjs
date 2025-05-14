@@ -1,39 +1,83 @@
-.App {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.student-form-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #f8f8f8;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.student-form h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
 }
 
-input {
+.student-form input {
+  width: 100%;
   padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
   font-size: 16px;
 }
 
-button {
+.student-form button {
+  width: 100%;
   padding: 10px;
-  background: #007bff;
-  color: #fff;
+  background-color: #007bfc;
+  color: white;
   border: none;
+  border-radius: 6px;
+  font-size: 16px;
   cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
-ul {
+.student-form button:hover {
+  background-color: #005bb5;
+}
+
+.message {
+  margin-top: 15px;
+  font-size: 14px;
+  text-align: center;
+  color: red;
+}
+
+.student-list-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 25px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.student-list-container h2 {
+  margin-bottom: 15px;
+  text-align: center;
+  color: #333;
+}
+
+.student-list-container ul {
   list-style: none;
   padding: 0;
 }
 
-li {
-  background: #eee;
-  margin-top: 10px;
-  padding: 10px;
-  border-radius: 4px;
+.student-list-container li {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 16px;
+}
+
+.student-list-container li:last-child {
+  border-bottom: none;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  margin-bottom: 10px;
 }
