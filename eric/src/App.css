@@ -1,0 +1,182 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f6f7;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1300px;
+  margin: auto;
+}
+
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header-section h2 {
+  color: #1a3d7c;
+}
+
+.export-buttons button {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.export-buttons img {
+  width: 16px;
+  height: 16px;
+}
+
+.question-box {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.question-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.note-text a {
+  color: #007bff;
+  text-decoration: none;
+  margin-left: 4px;
+}
+
+.feedback-icons {
+  margin-top: 10px;
+  display: flex;
+  gap: 15px;
+}
+
+.feedback-icons img {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.response-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.response-header {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.company-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.reference-tag {
+  font-size: 12px;
+  color: #777;
+}
+
+.response-actions {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: #007bff;
+  cursor: pointer;
+}
+
+.reference-panel {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.reference-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.reference-close {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.reference-content {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.results-container {
+  display: flex;
+  gap: 20px;
+}
+
+.left-column {
+  flex: 1;
+}
+
+.right-column {
+  width: 40%;
+  min-width: 380px;
+}
+
+.feedback-icons.right {
+  justify-content: flex-end;
+  display: flex;
+  gap: 10px;
+}
+.export-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.export-buttons button {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+/* Custom style ONLY for the Excel button */
+.excel-button {
+  background-color: #28a745 !important; 
+}
